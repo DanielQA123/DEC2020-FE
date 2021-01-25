@@ -1,0 +1,19 @@
+/* access via element */
+body{
+    background-color: chocolate;
+}
+
+/* Access via id */
+#id{
+    background-color: darkgreen;
+}
+
+/* access via class */
+.lorem{
+    background-color: red;
+}
+
+/* access via element,id,and class */
+ol#techs.stylMe{
+    text-decoration: underline;
+}

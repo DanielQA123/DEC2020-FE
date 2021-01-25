@@ -1,0 +1,17 @@
+/* 
+ID = # 
+Class = .
+*/
+
+#name{
+    color: blueviolet;
+    background-color: chartreuse;
+}
+
+/* generic = look for <element class="lorem"> */
+.lorem{
+    font-size: 30px;
+}
+
+/* specific = look for <p class="lorem"> */
+/* p.lorem{} */
