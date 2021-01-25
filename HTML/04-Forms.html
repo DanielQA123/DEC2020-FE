@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <!-- Organise information, user input -->
+    <!-- METHOD = how the information is passed to a server  -->
+    <!-- GET = Arguments are appended to the URL of the rquest -->
+    <!-- POST = Information is sent in the body of the request -->
+    <form method="GET" action="">
+        <label>Enter your username: </label>
+        <input type="text" name="username" required />
+        <br />
+        <!-- <input type= "button"/> -->
+        <label>Enter your password:</label>
+        <input type="password" name="pwd" />
+        <br />
+        <label>Enter email:</label>
+        <input type="email" name="email" />
+        <br />
+        <label>Enter your phone num:</label>
+        <input type="tel" name="tel" value="123337" />
+        <br />
+        <label>URL of the company you work at: </label>
+        <input type="URL" name="URL" />
+        <br />
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender">Male </input>
+        <input type="radio" id="female" name="gender">Female </input>
+        <input type="radio" id="pnts" name="gender">Prefer not to say </input>
+        </br>
+
+        <label>What food do you like to eat? </label>
+        <input type="checkbox">Chicken</input>
+        <input type="checkbox">Burgers</input>
+        <input type="checkbox">Burger King</input>
+        <input type="checkbox">Cake-Out</input>
+
+        </br>
+        <input list="browsers" />
+        <datalist id="browsers">
+            <option value="IE">Internet explorer</option>
+
+        </datalist>
+
+        </br>
+        <label>How old are you?</label>
+        <input type="number" disabled />
+        <input type="data" />
+
+        <label>Comments:</label>
+        <textarea row="10" cols="50" maxlength="3">
+            Feedback?
+        </textarea>
+        </br>
+
+        <button type="submit">Submit</button>
+        <button type="rest">Reset Values</button>
+    </form>
+
+</body>
+
+</html>
