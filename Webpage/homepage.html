@@ -5,48 +5,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QA Cinemas Homepage</title>
-    <link rel="stylesheet" type="text/css" href="homepage.css">
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- Main header that will be used for the website -->
     <header>
-        <h1> QA Cinemas </h1>
+        <h1 id="name" style="background-color: cornsilk;" class="text-center"> Entertainment By QA </h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Schedule</a></li>
-            <li><a href="#">Sign Up</a></li>
-        </ul>
 
-        <form>
-            <input type="Search" name="q" placeholder="Search query">
-            <input type="submit" value="Go!">
-        </form>
-        </br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <a class="navbar-brand" href="#">QA Cinemas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Films<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cinema Locations</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Offers & Membership
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Sign in</a>
+                        <a class="dropdown-item" href="#">Sign Up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Reedem Rewards</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
     </nav>
-
+    </br>
     <!-- The webiste main content -->
     <main>
         <article>
-            <h2>News and Updates</h2>
-            <p>At QA cinemas we have the highest stands and we want to meet all of our expectations for our customers
+            <h2 id="heading" style="background-color: lavenderblush;">News and Updates</h2>
+            <p class="round text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora dignissimos iure nihil
+                enim molestias,
+                tempore accusamus ipsum voluptates voluptatem veritatis odio asperiores repellat libero laborum, id
+                velit fuga. Quisquam, dolore?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aperiam doloremque ea possimus
+                dignissimos. Possimus enim repellat aut omnis error fugit earum impedit minima?
+                Excepturi ut eaque fugiat neque quidem.
             </p>
+            </br>
 
-            <img src="../Resources/imax.jpg" alt="latest cinema picture" title="cinema screen" />
-            <img src="../Resources/cinema.jpg" alt=" inside our cinemas" title="screen room" />
-            <img src="../Resources/Movie-1200-630.jpg" alt="Cinema hall" title="empty movie screen" width="400" height="200" />
+            <div class="container" style="text-align: center;">
+                <img src="../Resources/imax.jpg" alt="latest cinema picture" title="cinema screen" class="rounded-sm" />
+                <img src="../Resources/cinema.jpg" alt=" inside our cinemas" title="entrance to screen room"
+                    class="rounded-sm" />
+                <img src="../Resources/Movie-1200-630.jpg" alt="Cinema hall" title="empty movie screen" width="400"
+                    height="200" class="rounded-sm" />
+            </div>
+            </br>
 
             <h3>Latest Relases</h3>
-            <p> See Hugh Jackman star in his latest film X-men Awakening</p>
-            <p>Avengers Endgame is our highest grossing film for a second week in a row </p>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Neque hic similique excepturi incidunt ullam consequatur, saepe dolorum velit fugiat? Rem, maxime?
+                Aliquid sunt quidem modi eligendi ea nisi aut vel? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, illo magni vitae inventore asperiores autem sint alias suscipit quibusdam,
+                in accusantium doloremque, minus laudantium reiciendis est quis tempore? Tempore, ducimus!</p>
+            
+            <!-- <p> See Hugh Jackman star in his latest film X-men Awakening</p>
+            <p>Avengers Endgame is our highest grossing film for a second week in a row </p> -->
+            </br>
 
             <h3>Cinema Locations </h3>
             <p>We have recently open new cinemas at these locations across the uk: </p>
@@ -60,7 +99,7 @@
 
         <!-- The aside content can also be nested within the main content -->
         <aside>
-            <h2>Newest Film Trailers</h2>
+            <h3>Newest Film Trailers</h3>
 
             <ol start=1>
                 <li><a href="#">Alien Wars</a></li>
@@ -77,8 +116,12 @@
     </footer>
 
 
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
 </body>
 
