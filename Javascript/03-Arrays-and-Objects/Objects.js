@@ -41,6 +41,7 @@ console.log(person["date of birth"]);
 //Literal notation can be used to create complex arrays of objects: 
 
 let carPark = [
+    myCar,
     {make: "Audi", model:"A3", colour:"red"},
     {make: "Suzuki", model:"swift", colour:"black"}
 ]
@@ -86,3 +87,15 @@ let myJSONObject ={
 let toAdd = {"productname":"mayo","price":0.99,"quantity":1};
 
 console.log(myJSONObject);
+
+console.log(myCar);
+let myCarToText = JSON.stringify(myCar);
+console.log(typeof myCar);
+console.log(typeof myCarToText);
+console.log(myCarToText);
+
+let userData = `{"name":"Dan"}`;
+console.log(typeof userData);
+let obj = JSON.parse(userData);
+console.log(obj);
+console.log(typeof obj);
