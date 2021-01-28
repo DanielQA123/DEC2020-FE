@@ -9,7 +9,7 @@ var c ="c"; //VARY BAD wouldn't recommend using it.
 a ="I am the LET"; // access variable a and change to value "b";
 // b = "something else"; //fixed val = ERROR!
 
-// TO print on the console
+// To print on the console = console.log();
 console.log(a);
 console.info("Info");
 console.warn("Warning");
@@ -27,10 +27,11 @@ console.log(typeof year);
 console.log(typeof value);
 console.log(typeof num);
 
+
 //Null = explicity stating that it's empty at runtime 
 // Undefined = isn't initalised at declaration
 
-let age = null; // Saying its empty explicity 
+let age = null; // Saying its empty explicity (the object is empty)
 let dan; //uninitialise => undefined at the moment 
 
 // String interpolation / concatenation
