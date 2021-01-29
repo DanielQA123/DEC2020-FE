@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Band Sign-Up</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"> Music at TRAP </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./Music-Homepage.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./CreateMusician.html">Musician </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./CreateBand.html">Band</a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+
+    </nav>
+
+
+
+    <div class="container">
+        <h3 class="text-center">Create Band</h3>
+        <div class="row">
+            <div class="col-md">
+
+
+                <div class="container text-center">
+                    <button type="btn" class="btn btn-success" data-toggle="modal" data-target="#firstModal">Create a
+                        Band
+                    </button>
+                </div>
+
+                <div class="modal" id="firstModal">
+                    <div class="modal-dialog">
+                        <div class="model-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title">Signing Up A Musician </h2>
+                                <button type="button" data-dissmiss="modal" class="btn btn-danger">
+                                    <span> X </span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- <label class="form-check-label">Name of Band: </label> -->
+                                <input type="text" class="form-control" id="CreateABand" placeholder="Create a Band:" />
+                                <input type="text" class="form-control" id="Genre" placeholder="Genre:" />
+                                <input type="text" class="form-control" id="Members" placeholder="how many members" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" onclick="createUsers()"
+                                    data-dismiss="modal">Create A Musician </button>
+                                <button type="button" class="btn btn-danger" onclick="createUsers()"
+                                    data-dismiss="modal">RESET</button>
+                                <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <h3 class="text-center">Read Musician</h3>
+        <div class="row">
+            <div class="col-md">
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md">
+
+                            <button type="btn" class="btn btn-success" data-toggle="modal"
+                                data-target="#firstModal">Read
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="firstModal">
+            <div class="modal-dialog">
+                <div class="model-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Signing Up A Musician </h2>
+                        <button type="button" data-dissmiss="modal" class="btn btn-danger">
+                            <span> X </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="form-check-label">Name of Musician: </label>
+                        <input type="text" class="form-control" id="Name of Musician" placeholder="Name of Musician:" />
+                        <input type="text" class="form-control" id="Genre" placeholder="Genre:" />
+                        <input type="text" class="form-control" id="Album" placeholder="Album" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="createUsers()" data-dismiss="modal">Read
+                            A Musician
+                        </button>
+                        <button type="button" class="btn btn-danger" onclick="createUsers()"
+                            data-dismiss="modal">RESET</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <h3 class="text-center">Update Musician</h3>
+        <div class="row">
+            <div class="col-md">
+
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col-md">
+
+                            <button type="btn" class="btn btn-success" data-toggle="modal"
+                                data-target="#firstModal">Update a
+                                Musician
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="firstModal">
+            <div class="modal-dialog">
+                <div class="model-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Update A Musician </h2>
+                        <button type="button" data-dissmiss="modal" class="btn btn-danger">
+                            <span> X </span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label class="form-check-label">Name of Musician:
+                        </label>
+                        <input type="text" class="form-control" id="Name of Musician" placeholder="Name of Musician:" />
+                        <input type="text" class="form-control" id="Genre" placeholder="Genre:" />
+                        <input type="text" class="form-control" id="Album" placeholder="Album" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" onclick="createUsers()"
+                            data-dismiss="modal">Update</button>
+                        <button type="button" class="btn btn-danger" onclick="createUsers()"
+                            data-dismiss="modal">RESET</button>
+                        <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container text-center">
+        <h3 class="text-center">Delete Musician</h3>
+        <div class="row">
+            <div class="col-md">
+
+                <button type="btn" class="btn btn-success" data-toggle="modal" data-target="#firstModal">Delete
+                    Musician</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="firstModal">
+        <div class="modal-dialog">
+            <div class="model-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Delete Musician </h2>
+                    <button type="button" data-dissmiss="modal" class="btn btn-danger">
+                        <span> X </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label class="form-check-label">Name of Musician:
+                    </label>
+                    <input type="text" class="form-control" id="Name of Musician" placeholder="Name of Musician:" />
+                    <input type="text" class="form-control" id="Genre" placeholder="Genre:" />
+                    <input type="text" class="form-control" id="Album" placeholder="Album" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="createUsers()" data-dismiss="modal">Delete
+                        Musician
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="createUsers()"
+                        data-dismiss="modal">RESET</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
