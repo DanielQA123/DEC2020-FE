@@ -3,20 +3,27 @@
 const todoURL = "http://localhost:8080/todo";
 const todoSystemURL = "http://localhost:8080/todoSystem";
 
-const todoReadId = document.querySelector("#todoReadId");
+// const todoReadId = document.querySelector("#todoReadId");
+
+const TodoIdRead = document.querySelector("#todoIdRead");
 
 const todoTitle = document.querySelector('#createTitle');
 const todoDescription = document.querySelector('#createDescription');
 const todoDate = document.querySelector('#createDate');
 const todoDone = document.querySelector('#createDone');
 
-const todoId = todoIdUpdate.querySelector('#');
-const todoTitle = todoTitleUpdate.querySelector('#');
-const todoDescription = todoDescriptionUpdate.querySelector('#');
-const todoDate = todoDateUpdate.querySelector('#');
-const todoDone = todoDoneUpdate.querySelector('#');
+const result = document.querySelector("#result"); 
 
-const todoDeleteId = document.querySelector('#deleteTodo');
+const todoIdUpdate = document.querySelector('#todoIdUpdate');
+const todoTitleUpdate = document.querySelector('#todoTitleUpdate');
+const todoDescriptionUpdate = document.querySelector('#todoDescriptionUpdate');
+const todoDateUpdate = document.querySelector('#todoDateUpdate');
+const todoDoneUpdate = document.querySelector('#updateDone');
+
+// const todoDeleteId = document.querySelector('#deleteTodo');
+
+const TodoIdDelete = document.querySelector("#deleteTodoId");
+
 
 //CRUD FUNCTIONALITY => CREATE, READ, UPDATE, DELETE
 //API => POST, GET, PUT, DELETE
@@ -25,6 +32,20 @@ const todoDeleteId = document.querySelector('#deleteTodo');
 //DOM: 
 
 //POST = CREATE:
+
+
+const printValue = (newResult) => {
+    result.value = newResult; 
+}
+
+const addToHistory = (result, readAll) => {
+    const p = document.createElement("p");
+    const info = document.createTextNode(`${readAll} = ${result}`);
+    p.appendChild(info);
+    history.appendChild(p);
+}
+
+
 const createTodo = () => {
 
     const todoTitleValue = todoTitle.value;
@@ -56,11 +77,12 @@ const createTodo = () => {
 
 //GET = READ:
 
-const readTodoId = (id) => {
+const readTodoId = () => {
 
-    const todoReadId = todoReadId.value;
+    const todoIdRead = TodoIdRead.value;
+    // const todoReadId = todoReadId.value;
 
-    fetch(`http://localhost:8080/todo/read/${todoReadId}`)
+    fetch(`http://localhost:8080/todo/read/${todoIdRead}`)
 
         .then((response) => {
             if (response.status !== 200) {
@@ -70,13 +92,16 @@ const readTodoId = (id) => {
             response.json().then((infofromserver) => console.log(infofromserver));
         })
         .catch((err) => console.log(`Fetch Error: -S ${err}`)
-        );
+        )
 
 }
 
 //GET = READ ALL:
 
 const readAllTodo = () => {
+
+    printValue(newResult);
+
     fetch('http://localhost:8080/todo/readAll')
         .then(response => response.json())
         .then(info => {
@@ -90,22 +115,22 @@ const readAllTodo = () => {
 //PUT = UPDATE:
 const updateTodo = () => {
 
-        const todoIdValue = todoIdUpdate.value;
-        const todoTitleValue = todoTitleUpdate.value;
-        const todoDescriptionValue = todoDescriptionUpdate.value;
-        const todoDateValue = todoDateUpdate.value;
-        const todoDoneValue = todoDoneUpdate.value;
+        const todo_IdValue = todoIdUpdate.value;
+        const todo_TitleValue = todoTitleUpdate.value;
+        const todo_DescriptionValue = todoDescriptionUpdate.value;
+        const todo_DateValue = todoDateUpdate.value;
+        const todo_DoneValue = todoDoneUpdate.value;
 
     let data = {
 
-        "id": todoIdValue,
-        "title": todoTitleValue,
-        "description": todoDescriptionValue,
-        "date": todoDateValue,
-        "finish": todoDoneValue
+        "id": todo_IdValue,
+        "title": todo_TitleValue,
+        "description": todo_DescriptionValue,
+        "date": todo_DateValue,
+        "finish": todo_DoneValue
     }
 
-    fetch(`http://localhost:8080/todo/update/${todoUpdateId}`, {
+    fetch(`http://localhost:8080/todo/update/${todo_IdValue}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: {
@@ -121,16 +146,18 @@ const updateTodo = () => {
 //DELETE/REMOVE = DELETE: 
 const deleteTodo = () => {
 
-    const todoDeleteId = todoIdDelete.value;
+    // const todoDeleteId = todoIdDelete.value;
 
-    fetch(`http://localhost:8080/todo/delete/${todoDeleteId}`, {
+    const todoIdDelete = TodoIdDelete.value;
+
+    fetch(`http://localhost:8080/todo/delete/${todoIdDelete}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
         }
     })
         .then(response => response.json())
-        .then(() => readAllTodo())
+        .then((info) => console.log(info))
         // .then(info => console.log(info))
         .catch(err => console.error(`Something Went Wrong!! ${err}`))
 

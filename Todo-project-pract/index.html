@@ -27,24 +27,25 @@
         <label for="createDescription">Description:</label>
         <input type="text" id="createDescription" class="form-control" placeholder="To-Do Description" />
         <label for="createDate">To-Do Due Date:</label>
-        <input type="datetime" id="createDate" class="form-control" placeholder="To-Do Due Date" />
+        <input type="text" id="createDate" class="form-control" placeholder="To-Do Due Date" />
         <label for="createDone">Done:</label>
         <input type="checkbox" id="createDone" />
 
         <div class="container text-center">
-            <button class="btn btn-success" type="button" id="createButton" onclick="createTodo();">Create</button>
+            <button class="btn btn-success" type="button" id="createButton" onclick="createTodo();">Create </button>
         </div>
     </section>
     </br>
 
     <section>
+        <div class="container text-center">
         <h2>Read Todo</h2>
+    </div>
     </section>
 
     <section>
         <h3>Read By Id</h3>
-        <label for="readTodo" id="todoReadId"> Read Todo By Id: </label>
-        <input type="number" id="todoReadId" class="form-control" placeholder="Enter Todo Id" />
+        <input type="number" id="todoIdRead" class="form-control" placeholder="Enter Todo Id" />
         <button class="btn btn-success" type="button" id="readButton" onclick="readTodoId();">Read</button>
     </section>
     </br>
@@ -52,19 +53,68 @@
     <section>
         <h3>ReadAll Todo</h3>
         <button class="btn btn-success" type="button" id="readButton" onclick="readAllTodo();">Read</button>
+
+        <div class="row">
+            <div class="col-md">
+                <br/>
+                <input type="text" class="form-control" id="result" placeholder="Result" disabled/>
+            </div>
+        </div>
+
+
     </section>
     </br>
 
     <section>
         <h2>Update Todo</h2>
-        <button class="btn btn-success" type="button" id="updateButton" onclick="update();">Update</button>
+        <div class="row">
+            <div class="col-md">
+                <label for="" class="form-check-label">Id:</label>
+                <input type="number" name="updateTodo" id="todoIdUpdate" class="form-control" placeholder="Enter Id">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <label for="" class="form-check-label">Title: </label>
+                <input type="text" name="updateTodo" id="todoTitleUpdate" class="form-control"
+                    placeholder="Enter Title">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <label for="" class="form-check-label">Description: </label>
+                <input type="text" name="updateTodo" id="todoDescriptionUpdate" class="form-control"
+                    placeholder="Enter Description">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <label for="" class="form-check-label">Date: </label>
+                <input type="text" name="updateTodo" id="todoDateUpdate" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <label for="createDone">Done:</label>
+                <input type="checkbox" id="updateDone" />
+            </div>
+        </div>
+
+
+        <div class="container text-center">
+            <button class="btn btn-success" type="submit" id="updateButton" onclick="updateTodo();">Update</button>
+        </div>
     </section>
     </br>
 
     <section>
         <h2>Delete Todo</h2>
         <label for="deleteTodo" id="deleteTodo">To-Do Id:</label>
-        <input type="number" id="deleteTodo" class="form-control" placeholder="Delete Todo" />
+        <input type="number" id="deleteTodoId" class="form-control" placeholder="Enter Id" />
         </br>
         <div class="container text-center">
             <button class="btn btn-success" type="button" id="deleteButton" onclick="deleteTodo();">Delete</button>
