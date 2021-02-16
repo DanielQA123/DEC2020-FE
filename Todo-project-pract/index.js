@@ -100,7 +100,7 @@ const readTodoId = () => {
 
 const readAllTodo = () => {
 
-    printValue(newResult);
+    // printValue(newResult);
 
     fetch('http://localhost:8080/todo/readAll')
         .then(response => response.json())

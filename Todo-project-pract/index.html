@@ -14,22 +14,69 @@
 
 <body>
 
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Todo Application</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Todo Tips</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Calender</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
     <section>
         <div class="container">
-            <h1 class="text-center">Todo</h1>
+            <h2 class="text-center">Todo</h2>
         </div>
     </section>
 
     <section>
-        <h2>Create Todo</h2>
-        <label for="createTitle">Title:</label>
-        <input type="text" id="createTitle" class="form-control" placeholder="To-Do Title:" />
-        <label for="createDescription">Description:</label>
-        <input type="text" id="createDescription" class="form-control" placeholder="To-Do Description" />
-        <label for="createDate">To-Do Due Date:</label>
-        <input type="text" id="createDate" class="form-control" placeholder="To-Do Due Date" />
-        <label for="createDone">Done:</label>
-        <input type="checkbox" id="createDone" />
+        <h3>Create Todo</h3>
+        <div class="row">
+            <div class="col-md">
+                <label for="createTitle">Title:</label>
+                <input type="text" id="createTitle" class="form-control" placeholder="To-Do Title:" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <label for="createDescription">Description:</label>
+                <input type="text" id="createDescription" class="form-control" placeholder="To-Do Description" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <label for="createDate">To-Do Due Date:</label>
+                <input type="text" id="createDate" class="form-control" placeholder="To-Do Due Date" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <label for="createDone">Done:</label>
+                <input type="checkbox" id="createDone" />
+            </div>
+        </div>
 
         <div class="container text-center">
             <button class="btn btn-success" type="button" id="createButton" onclick="createTodo();">Create </button>
@@ -39,34 +86,37 @@
 
     <section>
         <div class="container text-center">
-        <h2>Read Todo</h2>
-    </div>
+            <h2>Read Todo</h2>
+        </div>
     </section>
 
     <section>
-        <h3>Read By Id</h3>
+        <div class="container text-center">
+            <h3>Read By Id</h3>
+        </div>
         <input type="number" id="todoIdRead" class="form-control" placeholder="Enter Todo Id" />
-        <button class="btn btn-success" type="button" id="readButton" onclick="readTodoId();">Read</button>
+
+        <div class="container text-center">
+            <button class="btn btn-success" type="button" id="readButton" onclick="readTodoId();">Read</button>
+        </div>
     </section>
     </br>
 
     <section>
-        <h3>ReadAll Todo</h3>
-        <button class="btn btn-success" type="button" id="readButton" onclick="readAllTodo();">Read</button>
-
-        <div class="row">
-            <div class="col-md">
-                <br/>
-                <input type="text" class="form-control" id="result" placeholder="Result" disabled/>
-            </div>
+        <div class="container text-center">
+            <h3>ReadAll Todo</h3>
+        </div>
+        <div class="container text-center">
+            <button class="btn btn-success" type="button" id="readButton" onclick="readAllTodo();">Read</button>
         </div>
 
-
     </section>
     </br>
 
     <section>
-        <h2>Update Todo</h2>
+        <div class="container text-center">
+            <h3>Update Todo</h3>
+        </div>
         <div class="row">
             <div class="col-md">
                 <label for="" class="form-check-label">Id:</label>
@@ -112,7 +162,9 @@
     </br>
 
     <section>
-        <h2>Delete Todo</h2>
+        <div class="container text-center">
+            <h3>Delete Todo</h3>
+        </div>
         <label for="deleteTodo" id="deleteTodo">To-Do Id:</label>
         <input type="number" id="deleteTodoId" class="form-control" placeholder="Enter Id" />
         </br>
